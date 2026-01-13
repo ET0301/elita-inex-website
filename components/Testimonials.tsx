@@ -10,7 +10,7 @@ const Testimonials = () => {
     useEffect(() => {
         const timer = setInterval(() => {
             setIndex((prev) => (prev + 1) % TESTIMONIALS.length);
-        }, 8000);
+        }, 5000);
         return () => clearInterval(timer);
     }, []);
 

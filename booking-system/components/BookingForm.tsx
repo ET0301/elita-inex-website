@@ -36,26 +36,31 @@ export default function BookingForm({ selectedDate, selectedTime, user }: Bookin
         e.preventDefault()
         setSubmitting(true)
         try {
-            const res = await fetch('/api/bookings', {
+            // Updated to connect to production URL (n8n Webhook)
+            const res = await fetch('/webhook/ef2f7a53-d213-4674-b882-20ea3ebd04b3', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     serviceId,
                     date: format(selectedDate, 'yyyy-MM-dd'),
                     time: selectedTime,
-                    notes
+                    notes,
+                    user: {
+                        name: user.name,
+                        email: user.email
+                    },
+                    source: 'booking_system'
                 })
             })
 
             if (!res.ok) throw new Error("Booking failed")
 
-            const data = await res.json()
-
-            // Success - could redirect or show success state
-            alert(`Booking Confirmed! Ref: ${data.id}`)
+            // Success
+            alert(`Booking Request Sent! We will contact you shortly.`)
             router.refresh()
 
         } catch (err) {
+            console.error(err)
             alert("Something went wrong. Please try again.")
         } finally {
             setSubmitting(false)

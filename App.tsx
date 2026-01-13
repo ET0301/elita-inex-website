@@ -197,7 +197,7 @@ const Home = () => {
           <div className="order-1 lg:order-2">
             <span className="text-brand-bronze font-bold text-[9px] uppercase tracking-[0.4em] mb-8 block reveal">{t('about.label')}</span>
             <h2 className="text-3xl md:text-5xl font-serif mb-10 leading-tight reveal-text-auto">{t('about.title')} <br /> {t('about.titleEnd')}</h2>
-            <p className="text-white/60 text-base font-light leading-loose mb-12 reveal">
+            <p className="text-white/80 text-base font-light leading-loose mb-12 reveal">
               {t('about.description')}
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { STATS } from '../constants';
@@ -9,35 +9,37 @@ gsap.registerPlugin(ScrollTrigger);
 const StatsCounter = () => {
     const { t } = useLanguage();
     const sectionRef = useRef<HTMLDivElement>(null);
+    const textRefs = useRef<(HTMLSpanElement | null)[]>([]);
 
     const keys = ['stats.years', 'stats.global', 'stats.components', 'stats.craftsmen'];
 
     useEffect(() => {
         const ctx = gsap.context(() => {
-            STATS.forEach((_, i) => {
-                const counter = { value: 0 };
-                const target = STATS[i].value;
-                const el = document.getElementById(`stat-value-${i}`);
+            STATS.forEach((stat, i) => {
+                const el = textRefs.current[i];
+                if (!el) return;
 
-                if (el) {
-                    gsap.to(counter, {
-                        value: target,
-                        duration: 2,
-                        ease: "power2.out",
-                        scrollTrigger: {
-                            trigger: el,
-                            start: "top 90%",
-                        },
-                        onUpdate: () => {
-                            el.innerHTML = Math.floor(counter.value).toString();
-                        }
-                    });
-                }
+                const counter = { value: 0 };
+                const target = stat.value;
+
+                gsap.to(counter, {
+                    value: target,
+                    duration: 2.5,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 85%", // Trigger slightly earlier
+                        toggleActions: "play none none reverse" // Re-play if scrolled back
+                    },
+                    onUpdate: () => {
+                        el.textContent = Math.floor(counter.value).toString();
+                    }
+                });
             });
         }, sectionRef);
 
         return () => ctx.revert();
-    }, []);
+    }, [t]); // Re-run if language changes (though numbers are language-agnostic, the layout might shift)
 
     return (
         <section ref={sectionRef} className="py-32 bg-brand-charcoal border-y border-white/5">
@@ -47,7 +49,7 @@ const StatsCounter = () => {
                         <div key={i} className="text-center group reveal">
                             <div className="mb-4">
                                 <span
-                                    id={`stat-value-${i}`}
+                                    ref={el => { textRefs.current[i] = el }}
                                     className="text-5xl md:text-7xl font-serif text-white tracking-tight"
                                 >
                                     0
