@@ -13,7 +13,7 @@ export const PRODUCTS: Product[] = [
       fabrics: ['PVC Blackout', 'Soltis Performance'],
       mechanisms: ['Somfy RTS', 'Smart Home Integration']
     },
-    image: '/products/IMG_4571.jpg'
+    image: '/products/Motorized-Pergola.jpg'
   },
   {
     id: 'zip-screen-premium',
