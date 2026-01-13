@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"
+  publish = "out"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/webhook/*"
+  to = "https://et0301.app.n8n.cloud/webhook/:splat"
+  status = 200

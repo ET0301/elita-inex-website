@@ -1,0 +1,8 @@
+{
+  "name": "Elita Inex - Premium Custom Awnings",
+  "description": "Professional website for Elita Inex, specializing in custom-made awning design, manufacturing, and installation with integrated AI visualization and consultation.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

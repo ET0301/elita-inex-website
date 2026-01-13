@@ -1,0 +1,2 @@
+/webhook/* https://et0301.app.n8n.cloud/webhook/:splat 200
+/* /index.html 200

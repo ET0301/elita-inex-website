@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELITA INEX | Architectural Shading Systems</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            charcoal: '#121212',
+                            graphite: '#1c1c1c',
+                            bronze: '#9a7b4f',
+                            sand: '#f5f2ed',
+                            beige: '#dfd7cc'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Fraunces', 'serif'],
+                    },
+                    animation: {
+                        'reveal': 'reveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'reveal-slow': 'reveal 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'scale-in': 'scaleIn 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'spotlight': 'spotlight 2s ease .75s 1 forwards',
+                    },
+                    keyframes: {
+                        reveal: {
+                            '0%': { opacity: '0', transform: 'translateY(40px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        scaleIn: {
+                            '0%': { opacity: '0', transform: 'scale(1.1)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' },
+                        },
+                        spotlight: {
+                            '0%': { opacity: '0', transform: 'translate(-72%, -62%) scale(0.5)' },
+                            '100%': { opacity: '1', transform: 'translate(-50%, -40%) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f5f2ed;
+            color: #121212;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            overflow-x: hidden;
+        }
+
+        .cinematic-shadow {
+            box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.1);
+        }
+
+        .bronze-gradient {
+            background: linear-gradient(135deg, #9a7b4f 0%, #b39265 100%);
+        }
+
+        .text-balance {
+            text-wrap: balance;
+        }
+
+        .reveal-on-scroll {
+            opacity: 0;
+        }
+
+        .reveal-on-scroll.visible {
+            animation: reveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* Custom image container to maintain "smaller" elegant aspect */
+        .img-container-small {
+            max-width: 85%;
+            margin: 0 auto;
+        }
+    </style>
+
+    <link rel="stylesheet" href="/index.css">
+</head>
+
+<body class="selection:bg-brand-bronze selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+    <script>
+            (function () { if (!window.chatbase || window.chatbase("getState") !== "initialized") { window.chatbase = (...arguments) => { if (!window.chatbase.q) { window.chatbase.q = [] } window.chatbase.q.push(arguments) }; window.chatbase = new Proxy(window.chatbase, { get(target, prop) { if (prop === "q") { return target.q } return (...args) => target(prop, ...args) } }) } const onLoad = function () { const script = document.createElement("script"); script.src = "https://www.chatbase.co/embed.min.js"; script.id = "5pGkTuCxpj35UPo664x86"; script.domain = "www.chatbase.co"; document.body.appendChild(script) }; if (document.readyState === "complete") { onLoad() } else { window.addEventListener("load", onLoad) } })();
+    </script>
+</body>
+
+</html>
