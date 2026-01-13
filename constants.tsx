@@ -26,7 +26,7 @@ export const PRODUCTS: Product[] = [
       fabrics: ['Micro-perforated Mesh', 'Crystal Clear PVC'],
       mechanisms: ['Remote Controlled', 'Sun/Wind Sensors']
     },
-    image: '/products/IMG_4574.jpg'
+    image: '/products/IMG_4569.jpg'
   },
   {
     id: 'glass-sliding-system',
@@ -39,7 +39,7 @@ export const PRODUCTS: Product[] = [
       fabrics: ['10mm Tempered Glass', 'UV Filtered'],
       mechanisms: ['Soft-close Sliders', 'Folding Track']
     },
-    image: '/products/Glass Enclosure.jpg'
+    image: '/products/Structural-Glass-Enclosure.jpg'
   },
   {
     id: 'folding-arm-awning',
