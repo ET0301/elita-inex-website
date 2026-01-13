@@ -39,7 +39,7 @@ export const PRODUCTS: Product[] = [
       fabrics: ['10mm Tempered Glass', 'UV Filtered'],
       mechanisms: ['Soft-close Sliders', 'Folding Track']
     },
-    image: '/products/Structural-Glass-Enclosure.jpg'
+    image: '/products/IMG_4568.jpg'
   },
   {
     id: 'folding-arm-awning',
