@@ -13,7 +13,7 @@ export const PRODUCTS: Product[] = [
       fabrics: ['PVC Blackout', 'Soltis Performance'],
       mechanisms: ['Somfy RTS', 'Smart Home Integration']
     },
-    image: '/products/Hovedbilde (stor pergola med LED).jpg'
+    image: '/products/IMG_4571.jpg'
   },
   {
     id: 'zip-screen-premium',
@@ -26,7 +26,7 @@ export const PRODUCTS: Product[] = [
       fabrics: ['Micro-perforated Mesh', 'Crystal Clear PVC'],
       mechanisms: ['Remote Controlled', 'Sun/Wind Sensors']
     },
-    image: '/products/IMG_4569.jpg'
+    image: '/products/Hovedbilde (stor pergola med LED).jpg'
   },
   {
     id: 'glass-sliding-system',
@@ -39,7 +39,7 @@ export const PRODUCTS: Product[] = [
       fabrics: ['10mm Tempered Glass', 'UV Filtered'],
       mechanisms: ['Soft-close Sliders', 'Folding Track']
     },
-    image: '/products/IMG_4568.jpg'
+    image: '/products/Blue LED.jpg'
   },
   {
     id: 'folding-arm-awning',
@@ -52,7 +52,7 @@ export const PRODUCTS: Product[] = [
       fabrics: ['Acrylic Canvas', 'Waterproof Polyester'],
       mechanisms: ['Manual Crank', 'Motorized']
     },
-    image: '/products/IMG_4572.jpg'
+    image: '/products/Sun Shade.jpg'
   },
   {
     id: 'led-pergola-blue',
@@ -65,7 +65,7 @@ export const PRODUCTS: Product[] = [
       fabrics: ['LED Strip Integration', 'Weatherproof Housing'],
       mechanisms: ['Smart Controls', 'Dimmable LEDs']
     },
-    image: '/products/Blue LED.jpg'
+    image: '/products/IMG_4568.jpg'
   },
   {
     id: 'led-pergola-green',
@@ -78,7 +78,7 @@ export const PRODUCTS: Product[] = [
       fabrics: ['Recessed LED Strips', 'Adjustable Brightness'],
       mechanisms: ['Remote Control', 'App Integration']
     },
-    image: '/products/Green LED.jpg'
+    image: '/products/IMG_4569.jpg'
   },
   {
     id: 'led-pergola-gradient',
